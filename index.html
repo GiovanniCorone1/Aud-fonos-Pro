@@ -14,7 +14,21 @@
   <header class="header">
     <div class="contenedor contenido-header">
       <div class="imagen-header">
-        <img src="./img/header.png" alt="">
+        <picture>
+          <source
+            sizes="1920w" 
+            srcset="img/header.avif 1920w" 
+            type="image/avif">
+          <source
+            sizes="1920w" 
+            srcset="img/header.webp 1920w" 
+            type="image/webp">
+          <source
+           sizes="1920w" 
+           srcset="img/header.jpg 1920w" 
+           type="image/jpeg">
+        <img loading="lazy" decoding="async" src="img/header.jpg" lazyalt="imagen" width="1000" height="600">
+        </picture>
       </div> <!-- .imagen-header -->
       <div class="texto-header">
         <p class="tagline-producto">El mejor sonido</p>
@@ -43,5 +57,32 @@
       </div>
     </div>
   </section>
+
+  <section class="sobre-audifonos">
+    <div class="contenedor sobre-audifonos-grid">
+      <div class="texto-sobre-audifonos">
+        <h2>Sobre <span>Audifonos Pro</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quod ad architecto illum quae sequi ut omnis, dignissimos fugit quos ab. Animi mollitia, reiciendis earum consequatur sequi praesentium sed soluta.</p>
+      </div>
+    </div>
+  </section>
+  <main class="contenedor modelos">
+    <h2 class="text-center">Elige tu modelo</h2>
+    <div>
+
+      <div class="modelo modelo1">
+        <h3>Modelo 1</h3>
+        <p class="precio">$6</p>
+      </div>
+      <div class="modelo modelo2">
+        <h3>Modelo 2</h3>
+        <p class="precio">$7</p>
+      </div>
+      <div class="modelo modelo3">
+        <h3>Modelo 3</h3>
+        <p class="precio">$8</p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

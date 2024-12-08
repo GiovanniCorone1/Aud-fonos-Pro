@@ -47,7 +47,7 @@ h3{
   font-size:2.8rem;
 }
 img{
-  display:block;/*para eliminar separacion de la parte inferior*/
+  display:block;/*para eliminar separacion por margenes internos*/
   max-width:100%;
   height: auto;
 }
@@ -71,7 +71,8 @@ img{
 @media (min-width:768px){
   .contenido-header{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
   }
 }
 
@@ -83,12 +84,12 @@ img{
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   padding-top:var(--separacion);
 }
 @media (min-width:768px){
   .texto-header{
     text-align: left;
+    padding-top:0;
   }
 }
 .tagline-producto{
@@ -133,4 +134,49 @@ img{
 .icono h3{
   color: var(--oscuro1);
   text-transform: uppercase;
+}
+/* seccion de Audifonos Pro*/
+.sobre-audifonos{
+  background-image:linear-gradient(to bottom ,transparent, var(--oscuro2)),url(../img/imagen-mujer.jpg); 
+  background-position:right;
+  /* gradiente repite , imagen no repite */
+  background-repeat: repeat ,no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px){
+  .sobre-audifonos{
+    background-image:linear-gradient(to left ,transparent 50%, var(--oscuro2) 0%),url(../img/imagen-mujer.jpg); 
+    /* gradiente repite , imagen no repite */
+    background-repeat: repeat ,no-repeat;
+    background-size: cover;
+  }  
+}
+.sobre-audifonos-grid{
+  display:grid;
+  grid-template-rows: repeat(2 , 40rem);
+  row-gap: var(--separacion);
+}
+@media (min-width: 768px){
+  .sobre-audifonos-grid{
+    grid-template-rows: none;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: unset;
+    padding: calc(var(--separacion) * 2) 0;
+  } 
+}    
+.texto-sobre-audifonos{
+  /* grid usado en los hijos */
+  grid-row: 2 / 3;
+  color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+}
+.texto-sobre-audifonos h2{
+  font-size: 3.6rem;
+}
+.texto-sobre-audifonos p{
+  font-size:1.8rem;
+  line-height: 2;
 }
