@@ -334,3 +334,16 @@ img{
   border: none;/*quitamos el borde*/
 } 
 /* footer */
+.footer{
+  margin: 12rem 0 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--oscuro1);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+@media (min-width: 768px) {
+  .footer{
+    margin: 5rem;
+  }  
+}
