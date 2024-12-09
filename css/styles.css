@@ -137,7 +137,7 @@ img{
 }
 /* seccion de Audifonos Pro*/
 .sobre-audifonos{
-  background-image:linear-gradient(to bottom ,transparent, var(--oscuro2)),url(../img/imagen-mujer.jpg); 
+  background-image:linear-gradient(to bottom ,transparent, var(--terciario)),url(../img/imagen-mujer.jpg); 
   background-position:right;
   /* gradiente repite , imagen no repite */
   background-repeat: repeat ,no-repeat;
@@ -145,7 +145,7 @@ img{
 }
 @media (min-width: 768px){
   .sobre-audifonos{
-    background-image:linear-gradient(to left ,transparent 50%, var(--oscuro2) 0%),url(../img/imagen-mujer.jpg); 
+    background-image:linear-gradient(to left ,transparent 50%, var(--primario) 0%),url(../img/imagen-mujer.jpg); 
     /* gradiente repite , imagen no repite */
     background-repeat: repeat ,no-repeat;
     background-size: cover;
@@ -179,4 +179,92 @@ img{
 .texto-sobre-audifonos p{
   font-size:1.8rem;
   line-height: 2;
+}
+/* Modelos */
+.modelos{
+  padding:calc(var(--separacion) / 2 ) 0;
+}
+@media (min-width: 992px) {
+  .modelos{
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+}
+.listado-modelos{
+  display:flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 992px) {
+  .listado-modelos{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows:repeat(2,20rem);
+    gap: var(--separacion);
+  }
+}
+.modelo{
+  background-color: var(--terciario);
+  margin-bottom:2rem;
+  padding-left:4rem;
+  color: var(--oscuro1);
+  border-radius: 2.5rem;
+  min-height: 20rem;
+  /* no repetimos la imagen */
+  background-repeat:no-repeat;  
+  /* posicionamos la imagen en el contenedor(div)*/
+  background-position: 90% center;
+  /* tamaño de la imagen */
+  background-size: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* animaciones */
+  transition-property: transform;
+  transition-duration:.4s ;
+}
+.modelo:hover{
+  transform: scale(1.1);/*aumentamos 10% el tamaño*/
+}
+@media (min-width: 992px) { 
+  .modelo{
+    margin-bottom: 0;
+  }
+}
+
+.modelo h3{
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+.modelo .precio{
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+/* eliminamos el margin al ultimo que se muestra en la pantalla (modelo 1) pero recordemos que la paseudoclse toma en cuenta el html donde el modelo 1 es el primero*/
+.modelo:first-of-type{
+  margin-bottom: 0;
+}
+.modelo1{
+  background-image: url(../img/modelo-x.svg);
+}
+.modelo2{
+  background-image: url(../img/modelo-y.svg);
+}
+.modelo3{
+  background-color:var(--primario);
+  color: var(--blanco);
+  background-image:url(../img/modelo-z.svg);
+}
+@media (min-width: 992px) {
+  .modelo3{
+    grid-column: 2/3;
+    grid-row:1/3;
+    background-size: 25rem;
+  }
+  .modelo3 h3{
+    font-size: 4rem;
+  }
+}
+.modelo3 .precio{
+  font-size:6rem ;
 }
