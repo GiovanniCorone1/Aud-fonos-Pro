@@ -279,6 +279,7 @@ img{
   background-repeat: no-repeat;
   background-size: cover ;
   background-position: center;
+  margin: calc(var(--separacion) / 2) 0;
 }
 @media (min-width: 768px) {
   .newsletter{
@@ -292,7 +293,7 @@ img{
 }
 .contenido-newsletter{
   display: grid;
-  grid-template-rows: repeat(2 , 30rem);
+  grid-template-rows: repeat(2 , 20rem);
   row-gap: var(--separacion);
 }
 @media (min-width: 768px) {
@@ -300,6 +301,7 @@ img{
     grid-template-rows: unset;
     grid-template-columns: repeat(2 , 1fr);
     column-gap: var(--separacion);
+    height: 25rem;
   }
 }
 .texto-newsletter{
@@ -331,3 +333,4 @@ img{
   font-weight: 700; /*grosor de la letra*/
   border: none;/*quitamos el borde*/
 } 
+/* footer */
