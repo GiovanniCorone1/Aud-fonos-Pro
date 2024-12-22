@@ -284,9 +284,8 @@ img{
 @media (min-width: 768px) {
   .newsletter{
     background-image: linear-gradient(to right , transparent 50%, var(--blanco) 0%),url(../img/newsletter.jpg);
-    background-position: 
     /* degradado , imagen */
-    center ,-17rem -5rem ;
+    background-position:center ,-17rem -5rem ;
     background-size: 100% , 100rem ;
     padding: 10rem 0;
   }  
